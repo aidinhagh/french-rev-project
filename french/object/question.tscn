@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://iy7gruo2jmtp"]
+
+[ext_resource type="Texture2D" uid="uid://chodc6ce8dnfk" path="res://assets/Question.png" id="1_imp18"]
+
+[node name="Question" type="Sprite2D" unique_id=2040786004]
+position = Vector2(210.99998, 37.999992)
+scale = Vector2(0.20870155, 0.20870155)
+texture = ExtResource("1_imp18")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1346627344]
+offset_left = -924.7655
+offset_top = -143.74591
+offset_right = 929.55725
+offset_bottom = 162.91211
