@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://q0srk5qfwif"]
+
+[ext_resource type="Texture2D" uid="uid://bpa2uvtxt8dsb" path="res://assets/CourtRoom.png" id="1_wbfu4"]
+
+[node name="Node2D" type="Node2D" unique_id=253351262]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1192147173]
+position = Vector2(576, 324)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_wbfu4")
