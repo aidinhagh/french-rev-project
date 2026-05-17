@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://q0srk5qfwif"]
 
+[ext_resource type="Script" uid="uid://v6yv0b6iw4qx" path="res://scripts/cour.gd" id="1_2vekm"]
 [ext_resource type="Texture2D" uid="uid://bpa2uvtxt8dsb" path="res://assets/CourtRoom.png" id="1_wbfu4"]
 [ext_resource type="Texture2D" uid="uid://c6fp2xhj6btxl" path="res://assets/PrisonerPortrait.png" id="2_sb48q"]
 [ext_resource type="Texture2D" uid="uid://dvq4aqecppvfq" path="res://assets/PrisonerTalk.png" id="3_t88pq"]
@@ -13,6 +14,7 @@
 load_path = "res://.godot/imported/Spare Button.png-06b95ad805616d5dadc5213973f9acf7.ctex"
 
 [node name="game" type="Node2D" unique_id=253351262]
+script = ExtResource("1_2vekm")
 
 [node name="background" type="TextureRect" parent="." unique_id=2131793841]
 offset_right = 3840.0
@@ -40,12 +42,12 @@ offset_bottom = 296.1565
 bbcode_enabled = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Prisoner statement box" type="Sprite2D" parent="prisoner" unique_id=654984895]
+[node name="prisoner statement box" type="Sprite2D" parent="prisoner" unique_id=654984895]
 position = Vector2(1500, 926)
 scale = Vector2(0.27262262, 0.31414622)
 texture = ExtResource("3_t88pq")
 
-[node name="Prisoner statement box text" type="RichTextLabel" parent="prisoner/Prisoner statement box" unique_id=1691512978]
+[node name="prisoner statement box text" type="RichTextLabel" parent="prisoner/prisoner statement box" unique_id=1691512978]
 offset_left = -876.6699
 offset_top = -452.0188
 offset_right = 887.67334
@@ -88,16 +90,16 @@ offset_right = 613.2827
 offset_bottom = 334.33325
 metadata/_edit_use_anchors_ = true
 
-[node name="Evidence" type="Node2D" parent="." unique_id=547211619]
+[node name="evidence" type="Node2D" parent="." unique_id=547211619]
 position = Vector2(6.1035156e-05, -6.1035156e-05)
 scale = Vector2(0.99999994, 1)
 
-[node name="EvidenceBoxB" type="Sprite2D" parent="Evidence" unique_id=446951536]
+[node name="evidenceBoxB" type="Sprite2D" parent="evidence" unique_id=446951536]
 position = Vector2(882.00006, 900)
 scale = Vector2(0.20012392, 0.20012392)
 texture = ExtResource("7_3mrqo")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Evidence/EvidenceBoxB" unique_id=1663479777]
+[node name="evidence Text" type="RichTextLabel" parent="evidence/evidenceBoxB" unique_id=1663479777]
 offset_left = -614.61914
 offset_right = 644.6006
 offset_bottom = 774.52
