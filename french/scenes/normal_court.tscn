@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://q0srk5qfwif"]
 
-[ext_resource type="Script" uid="uid://v6yv0b6iw4qx" path="res://scripts/cour.gd" id="1_2vekm"]
+[ext_resource type="Script" uid="uid://v6yv0b6iw4qx" path="res://scripts/court_main.gd" id="1_2vekm"]
 [ext_resource type="Texture2D" uid="uid://bpa2uvtxt8dsb" path="res://assets/CourtRoom.png" id="1_wbfu4"]
 [ext_resource type="Texture2D" uid="uid://c6fp2xhj6btxl" path="res://assets/PrisonerPortrait.png" id="2_sb48q"]
 [ext_resource type="Texture2D" uid="uid://dvq4aqecppvfq" path="res://assets/PrisonerTalk.png" id="3_t88pq"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dwwqrty6pv7sy" path="res://assets/ClueRelate.png" id="6_3mrqo"]
 [ext_resource type="Texture2D" uid="uid://dbglgk4aommqn" path="res://assets/EvidenceBoxB.png" id="7_3mrqo"]
 [ext_resource type="Texture2D" uid="uid://csc230tjwdy06" path="res://assets/Execute Button.png" id="8_joorw"]
+[ext_resource type="PackedScene" uid="uid://iy7gruo2jmtp" path="res://scenes/question.tscn" id="10_6telu"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2vekm"]
 load_path = "res://.godot/imported/Spare Button.png-06b95ad805616d5dadc5213973f9acf7.ctex"
@@ -54,6 +55,7 @@ offset_right = 887.67334
 offset_bottom = 474.30127
 theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true
+horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="report" type="Node2D" parent="." unique_id=652267337]
@@ -68,6 +70,10 @@ offset_left = -462.6667
 offset_top = -759.1644
 offset_right = 446.3758
 offset_bottom = 752.64795
+focus_mode = 2
+bbcode_enabled = true
+horizontal_alignment = 2
+selection_enabled = true
 metadata/_edit_use_anchors_ = true
 
 [node name="prosecuter" type="Node2D" parent="." unique_id=1055661444]
@@ -107,6 +113,7 @@ bbcode_enabled = true
 metadata/_edit_use_anchors_ = true
 
 [node name="action" type="Node2D" parent="." unique_id=1448765991]
+visible = false
 
 [node name="spare" type="Button" parent="action" unique_id=1452030055]
 offset_left = 587.0
@@ -144,3 +151,50 @@ offset_bottom = 133.00006
 theme_override_colors/font_color = Color(0.015686275, 0.011764706, 0.011764706, 1)
 theme_override_font_sizes/font_size = 70
 text = "Jury:neutral"
+
+[node name="question" type="Node2D" parent="." unique_id=2090539298]
+
+[node name="question1" parent="question" unique_id=2040786004 instance=ExtResource("10_6telu")]
+position = Vector2(220.99997, 137.99998)
+
+[node name="question1" type="RichTextLabel" parent="question/question1" unique_id=138157279]
+offset_left = -924.7656
+offset_top = -148.53741
+offset_right = 929.5571
+offset_bottom = 158.1206
+metadata/_edit_use_anchors_ = true
+
+[node name="question2" parent="question" unique_id=1026901696 instance=ExtResource("10_6telu")]
+position = Vector2(1694, 172)
+
+[node name="question2" type="RichTextLabel" parent="question/question2" unique_id=1415675372]
+offset_left = -924.7656
+offset_top = -148.53741
+offset_right = 929.5571
+offset_bottom = 158.1206
+metadata/_edit_use_anchors_ = true
+
+[node name="question3" parent="question" unique_id=751031152 instance=ExtResource("10_6telu")]
+position = Vector2(214.99998, 242)
+
+[node name="question3" type="RichTextLabel" parent="question/question3" unique_id=1222546584]
+offset_left = -924.7656
+offset_top = -148.53741
+offset_right = 929.5571
+offset_bottom = 158.1206
+metadata/_edit_use_anchors_ = true
+
+[node name="question4" parent="question" unique_id=1112720401 instance=ExtResource("10_6telu")]
+position = Vector2(1694, 274)
+
+[node name="question4" type="RichTextLabel" parent="question/question4" unique_id=507277699]
+offset_left = -924.7656
+offset_top = -148.53741
+offset_right = 929.5571
+offset_bottom = 158.1206
+metadata/_edit_use_anchors_ = true
+
+[connection signal="meta_clicked" from="prisoner/prisoner statement box/prisoner statement box text" to="." method="_on_prisoner_statement_box_text_meta_clicked"]
+[connection signal="meta_clicked" from="report/report paper/report paper text" to="." method="_on_report_paper_text_meta_clicked"]
+[connection signal="meta_clicked" from="prosecuter/prosecuter speech/prosecuter speech text" to="." method="_on_prosecuter_speech_text_meta_clicked"]
+[connection signal="meta_clicked" from="evidence/evidenceBoxB/evidence Text" to="." method="_on_evidence_text_meta_clicked"]
